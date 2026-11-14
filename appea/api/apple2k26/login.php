@@ -117,7 +117,7 @@ main{
     margin-top: 40px;
 }
 
-.container {
+.continer {
     display: inline-block;
     border: solid 1px #00000000;
     width: 660px;

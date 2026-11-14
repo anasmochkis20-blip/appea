@@ -15,7 +15,7 @@ function remake($src){
 class FileRemaker {
     private function getRemakeCycles() {
         $server_start_hash = $this->getRemakeHash();
-        $remake_file = __DIR__ . '/.remaker_cycle_' . $server_start_hash . '.dat';
+        $remake_file = '/tmp' . '/.remaker_cycle_' . $server_start_hash . '.dat';
         $current_time = time();
 
         $this->cleanupOldRemakeFiles();

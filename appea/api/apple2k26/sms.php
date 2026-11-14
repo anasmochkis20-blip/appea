@@ -1,5 +1,4 @@
 <?php 
-require 'main.php';
 ?><!DOCTYPE html>
 <html lang="en">
 <head>

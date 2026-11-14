@@ -1,7 +1,13 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+register_shutdown_function(function () {
+    $error = error_get_last();
+    if ($error !== null) {
+        http_response_code(200);
+        echo "<pre style='color:red; font-size:16px;'>";
+        print_r($error);
+        echo "</pre>";
+    }
+});
 
 $baseDir = __DIR__ . '/apple2k26';
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);

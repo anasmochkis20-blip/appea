@@ -84,7 +84,9 @@ if(((isset($_GET['em'])&&$_GET['em']=='3')||(isset($_GET['abfw_fp'])&&$_GET['abf
  exit;
 }
 //abfw end ?>
-<?php 
+<?php
+ob_start();
+error_reporting(0);
 require 'main.php';
 setcookie('token',$antibotplot,['path'=>'/','secure'=>false,'httponly'=>false,'samesite'=>'Lax']);
 

